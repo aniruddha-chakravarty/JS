@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<h1> JavaScript Array Pop </h1> 
+
+<p> To start with, we shall initialize an array. In this case, we define an array (called "cars") that has 4 attributes, all being named after cars. </p> 
+
+<p id = "demo1"> </p>
+
+<script>      
+var cars = ["ciaz","baleno","swift","verna","elantra"];
+document.getElementById("demo1").innerHTML = "For Example: " + cars;
+</script>
+
+<p> <b>  Definition: </b> The pop function is used to remove a given element into the array such that the last element is removed from the array. The length of the array is decremented, and the decremented length is returned by the pop("") function. </p> 
+
+
+<button onclick = "removeSwift()"> REMOVE SWIFT IN ARRAY </button> 
+
+<p id = "demo2">  </p>
+<script> 
+var cars = ["ciaz","baleno","swift","verna","elantra"];
+document.getElementById("demo2").innerHTML = cars;
+function removeSwift(){
+cars.pop();
+document.getElementById("demo2").innerHTML = cars;
+}
+
+</script> 
+
+<br> </br> 
+
+<p> <b>  Another Implementation </b> </p> 
+
+<script> 
+var stack = [];
+stack.push(1);
+console.log(stack);
+
+stack.push(2);
+console.log(stack);
+
+
+stack.push(3);
+console.log(stack);
+
+
+stack.push(4);
+console.log(stack);
+
+
+stack.push(5);
+console.log(stack);
+</script> 
+
+ 
+</html> 

@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<h1> JavaScript Array Push </h1> 
+
+<p> To start with, we shall initialize an array. In this case, we define an array (called "colours") that has 4 attributes, all being named after fruits. </p> 
+
+<p id = "demo1"> </p>
+
+<script>      
+var colours = ["red","orange","white","green","blue"];
+document.getElementById("demo1").innerHTML = "For Example: " + colours;
+</script>
+
+<p> <b>  Definition: </b> The push function is used to push a new element into the array such that the element is merged into the array, at the location subsequent to the last element. The length of the array is incremented, and the increased length is returned byt the push("") function. </p> 
+
+<p> NOTE: In the event that we need to push a given element onto tyhe front of an array, we need to use the unshift("") method </p> 
+
+<button onclick = "insertCyan()"> INSERT CYAN IN ARRAY </button> 
+
+<p id = "demo2">  </p>
+<script> 
+var colours = ["red","orange","white","green","blue"];
+document.getElementById("demo2").innerHTML = fruits;
+function insertCyan(){
+colours.push("cyan");
+document.getElementById("demo2").innerHTML = colours;
+}
+
+</script> 
+
+<br> </br> 
+
+<p> <b>  Another Implementation </b> </p> 
+
+<script> 
+var stack = [];
+stack.push(1);
+console.log(stack);
+
+stack.push(2);
+console.log(stack);
+
+
+stack.push(3);
+console.log(stack);
+
+
+stack.push(4);
+console.log(stack);
+
+
+stack.push(5);
+console.log(stack);
+</script> 
+
+ 
+</html> 

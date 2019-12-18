@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<h1> JavaScript String </h1> 
+
+<p> In JavaScript, we use string methods as functions in order to help us to work with strings. We have the following string functions: </p> 
+
+<ol> 
+<li> <p> <b>  String Length: </b>  In this case, we use this function to calculate the total number of characters present in the string. For instance, we have the following string, "ABCDEFGHIJKLMN". We shall create a variable "str", and equate the string to it. Using the length function, we shall attempt to calculate the total length in terms of the total number of characters present within the string. </p> 
+
+<p id = "demo1"> </p> 
+
+<script> 
+var str = "ABCDEFGHIJKLMN"; 
+document.getElementById("demo1").innerHTML = str.length; 
+</script>  
+
+</li> 
+
+<li> 
+<p> <b> indexOf(""): </b> We find that the indexOf("") function is used to determine the location of the first iteration of a given string located within a string. We shall consider the string "A Red apple is Red", and we find that there are 2 "Red" present. The indexOf("Red") will perform a comparision on the string, and give us the index of the first "Red". indexOf("") returns -1 if there is no smaller string found within the larger string as specified in the attribute.  </p> 
+
+<p id = "demo2"> </p> 
+
+<script> 
+var string = "A Red apple is Red";
+var indx = string.indexOf("Red");
+document.getElementById("demo2").innerHTML = indx;
+</script> 
+</li> 
+
+<li> 
+<p> <b> lastIndexOf(""): </b> We find that the lastIndexOf("") function is used to determine the location of the last / final iteration of a given string located within a string. We shall consider the string "A Red apple is Red", and we find that there are 2 "Red" present. The indexOf("Red") will perform a comparision on the string, and give us the index of the last "Red". lastIndexOf("") returns -1 if no smaller string is found in the larger string, as specified by the user in the attribute. </p> 
+
+
+<p id = "demo3"> </p> 
+
+<script> 
+var string = "A Red apple is Red";
+var indx = string.lastIndexOf("Red");
+document.getElementById("demo3").innerHTML = indx;
+</script> 
+</li> 
+
+<li> 
+<p> <b> search(""): </b> We find that the search("") function is used to determine the location of a given string located within a string. We shall consider the string "A Red apple is Red", and we find that there are 2 "Red" present. The search("Red") will perform a comparision on the string, and if it finds a given "Red" then it shall give us the index of the very first "Red" that it finds. However, in this case, we considered the sentence "A Blue apple is Blue", and as a result there is no "Red" string present in the large string that we are comparing the smaller string with. Thus, the search("") function yields the output as -1. </p> 
+
+<p id = "demo4"> </p> 
+
+<script> 
+var string = "A Blue apple is Blue";
+var indx = string.search("Red");
+document.getElementById("demo4").innerHTML = indx;
+</script> 
+</li> 
+
+
+<li> 
+<p> <b> slice(start_index_value, end_index_value): </b> In this case, the slice(start_index_value, end_index_value) function is used to determine the location of a given string located within a string. We shall consider the string "QWERTYUIOP", and we find that there are a fixed sequence of characters present. Now, using the slice() function, we can remove a certain number of characters by virtue of entering their exact index value. This way, by entering the starting index, and the ending index we can remove a character sequence from the string. We input 4 as the starting index, and take in 8 as the ending index, and we get "TYUI" as the output string. Thus, in the output, all elements in the range specified are considered. The starting element gets mentioned in the ouitput, as that is where the slicing operation begins.  <br> </br>
+
+However, the terminating element is not a part of the output as it is the site of the slicing operation. All elements leading to the terminating element are a part of the output, including the one right before it.   
+<br>  </br> 
+Likewise, in JavaScript, the string can be numbered in terms of negative numbers too, considering the last element of the string to be "-1", and the second last element of the stringn to be numbered as "-2" and so forth. Thus, we shall also consider a case wherein we input two negative numbers as the starting index, and the ending index. </p> 
+
+<br> </br> 
+
+<p id = "demo5"> </p> 
+<script> 
+var string = "QWERTYUIOP";
+var indx = string.slice(4, 8);
+document.getElementById("demo5").innerHTML = indx + "<br>" +  "(CASE-5: Positive Starting Index, and Negative Terminating Index)";
+</script> 
+
+
+<p id = "demo6"> </p> 
+<script> 
+var string = "QWERTYUIOP";
+var indx = string.slice(-4, -8);
+document.getElementById("demo5").innerHTML = indx + "<br>" +  "(CASE-2: Negative Starting and Terminating Index Values)";
+</script> 
+
+<p id = "demo7"> </p> 
+<script> 
+var string = "QWERTYUIOP";
+var indx = string.slice(-4);
+document.getElementById("demo7").innerHTML = indx + "<br>" +  "(CASE-3: Putting only the starting index value)";
+</script> 
+
+
+<p id = "demo8"> </p> 
+<script> 
+var string = "QWERTYUIOP";
+var indx = string.slice(-4, 8);
+document.getElementById("demo8").innerHTML = indx + "<br>" +  "(CASE-4: Negative Starting Index, and Positive Terminating Index)";
+</script> 
+
+<p id = "demo9"> </p> 
+<script> 
+var string = "QWERTYUIOP";
+var indx = string.slice(4, -8);
+document.getElementById("demo9").innerHTML = indx + "<br>" +  "(CASE-5: Positive Starting Index, and Negative Terminating Index)";
+</script> 
+
+</li> 
+
+
+
+
+
+
+
+
+
+
+
+</ol> 
+
+</body> 
+</html> 
