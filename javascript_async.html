@@ -1,13 +1,63 @@
-<!DOCTYPE html> 
-<html> 
-<h1> JS Callbacks, and why they are needed: </h1> 
-<script> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body> 
+  <!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="javascript_image.png" width="275" height="55" class="d-inline-block align-top" alt="">
+    
+  </a>
+</nav>
 
-function first(){
-console.log(1);
-};
-first();
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="list-group">
+            <a href="index.html"  class="list-group-item list-group-item-action">What is JavaScript? </a>
+            <a href="javascript_data_types.html"  class="list-group-item list-group-item-action">JS Data Types</a>
+            <a href="javascript_operators.html" class = "list-group-item list-group-item-action"> JS Operators </a> 
+            <a href="javascript_array.html" class = "list-group-item list-group-item-action"> JS Arrays </a> 
+            <a href="javascript_async.html" class = "list-group-item list-group-item-action"> JS Async Programming </a> 
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <p> <b> Why is it required? </b> <br> Reading from a file system, or getting things from an external API or retrival of data from memory sources other than the RAM. It has been noted that: 
+            <ul> <li> Processor Speeds and utilization is one of the main factors of computation speed </li>
+            
+            <li> Processor determines the pace of the internal computation, and the operating system can also allocate the processor towards other tasks. </li></ul>
 
+            <br> <b> Synchronous: </b> It allows for multiple things to run at the same time. When an action is called, the program continues to run. The program finishes exectution, and the action outputs are given to the program and the values are accordingly updated. <br> 
+            <b> Situation: </b> Program fetches 2 results from a network and combines results. So, in a nutshell, in synchronous, the program will partially execute, and then will wait for O/P of first reqest, and then wait for the outcome of a the second reqest. <br> 
+            Only then does the program continue it's execution. <b> The output is proportional to sum of execution of both request processes, assuming that they have proper outputs. </b> <br>
+          
+          The solution? <br> 
+        
+        <b> Threads.</b> <br> Since multiple processors are present in a computer system, each processor corresponds to a given thread. Let each thread correspond to a given action. When program awaits the request results, then the actions can simultaneously start, instead of the seond starting after the first one ends. <br> 
 
-</script> 
+        <b> Callback: </b> In standard OOP, we can pass objects into functions. JS aloows us to pass functions inside function, in order to yield output. <br>
+
+        <uL> <li> A callback is a function that is executed after another function is compoletely executed. </li>
+        
+        <li> JS allows functions as arguments, and treats functions as objects. Functions that are passed as arguments are called callback functions. </li>
+      
+      <li> JS is event driven, and it will not wait for the outcome of each process. </li></uL>
+      
+      </p>
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body> 
 </html> 

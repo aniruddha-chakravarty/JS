@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,16 +31,21 @@
         <div class="col-sm-10">
           <p width : 800px;> 
 
-            <li> <a href = "javascript_array_push.html"> JS Array Push </a> </li> 
-            <li> <a href = "javascript_array_pop.html"> JS Array Pop </a> </li> 
-            <li>  JS Array Splice  </li> 
-            <li> JS Array Length </li> 
-            <li> JS Array Slice </li> 
-            <li> JS Array Concat   </li> 
-            <li> JS Array Delete </li> 
-            <li> JS Array Shift  </li> 
-            <li> JS Array Unshift </li> 
 
+            <div class="col-sm-10">
+            <ul>
+                <li>Boolean</li>
+                <li>Numeric</li>
+                <li>String</li>
+                <li>Arrays</li>
+                <li>User defined</li>
+            </ul>
+            <input type="number" placeholder="Enter the number" id="idNum">
+            <button onclick="showTable()">
+            Click
+            </button> 
+            <div id="showTableId"></div>
+        </div>
           </p>
 
         </div>
@@ -50,5 +57,22 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        function showTable(){
+           var num = document.querySelector("#idNum").value;
+
+            var str = ""
+            for(let i=1;i<=10;i++){
+                str += `${num} * ${i} = ${num*i}<br>`
+            }
+         
+            document.querySelector("#showTableId").innerHTML = str;
+
+        }
+
+    </script>
+
 </body> 
+
 </html> 
